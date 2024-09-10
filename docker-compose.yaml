@@ -1,0 +1,13 @@
+services:
+  bowlby:
+    build:
+      context: .
+    volumes:
+      - data:/data
+    ports:
+      - 56567:56567
+    environment:
+      BOWLBY_GH_AUTH_TOKEN: ${BOWLBY_GH_AUTH_TOKEN}
+
+volumes:
+  data:
